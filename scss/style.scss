@@ -1,0 +1,143 @@
+@import 'normalize.css';
+@import 'layout';
+
+@import 'slick';
+
+@mixin title-font {
+	font-family: 'Playfair Display';
+	font-weight: 400;
+	font-size: 80px;
+	letter-spacing: .005em;
+}
+$contrast-color: #EECD31;
+
+.ba-container {
+	width: 1862px;
+	position: relative;
+}
+.ba-button {
+	color: #FFF;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: .005em;
+	text-transform: uppercase;
+	background-color: $contrast-color;
+	border-radius: 25px;
+	transition: background-color .2s ease-in;
+	&:hover {
+		background-color: lighten($contrast-color, 15%);
+	}
+}
+.ba-intro-slider {
+	background-color: #000;
+	font-family: 'Open Sans';
+	font-weight: 400;
+	line-height: 1;
+	color: #FFF;
+}
+.ba-wrap {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+.ba-logo {
+	margin: 26px 0;
+	float: left;
+}
+.ba-navigation {
+	float: right;
+	&__list {
+		list-style-type: none;
+		margin: 36px 0;
+		padding: 0;
+	}
+	&__item {
+		float: left;
+		& + li {
+			margin-left: 35px;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 600;
+		color: #FFF;
+		transition: color .2s ease-in;
+		&:hover {
+			color: $contrast-color;
+		}
+	}
+}
+.ba-banner {
+	height: 100vh;
+	text-align: center;
+}
+.ba-slide {
+	margin-top: 141px;
+	&__title {
+		@include title-font;
+		width: 1140px;
+		margin: 100px auto 35px;
+	}
+	&__text {
+		margin: 15px auto;
+		width: 760px;
+		font-size: 30px;
+		font-weight: 300;
+		line-height: 1.6;
+	}
+	&__button {
+		display: inline-block;
+		text-decoration: none;
+		padding: 12px 27px;
+		margin: 25px auto 85px;
+	}
+}
+.slick-dots {
+	list-style-type: none;
+	padding: 0;
+	margin: 85px auto 0;
+	li {
+		display: inline-block;
+		& + li {
+			margin-left: 15px;
+		}
+		&.slick-active {
+			button {
+				background-color: #FFF;
+			}
+		}
+	}
+	button {
+		display: inline-block;
+		border-radius: 50%;
+		width: 16px;
+		height: 16px;
+		border: none;
+		font-size: 0;
+		padding: 0;
+		background-color: #8c8c8c;
+		cursor: pointer;
+		transition: background-color .2s ease-in;
+		&:hover {
+			background-color: #fff;
+		}
+	}
+}
+.ba-arrow {
+	color: #FFF;
+	font-size: 75px;
+	background-color: transparent;
+	border: none;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	outline: none;
+	cursor: pointer;
+	&__prev {
+		left: 0;
+	}
+	&__next {
+		right: 0;
+	}
+}
