@@ -6,18 +6,17 @@
 @mixin title-font {
 	font-family: 'Playfair Display';
 	font-weight: 400;
-	font-size: 80px;
+	font-size: 50px;
 	letter-spacing: .005em;
 }
 $contrast-color: #EECD31;
 
 .ba-container {
-	max-width: 1462px;
 	position: relative;
 }
 .ba-button {
 	color: #FFF;
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 2;
 	letter-spacing: .005em;
 	text-transform: uppercase;
@@ -73,16 +72,16 @@ $contrast-color: #EECD31;
 	text-align: center;
 }
 .ba-slide {
-	margin-top: 141px;
+	margin-top: 120px;
 	&__title {
 		@include title-font;
-		width: 1140px;
+		width: 800px;
 		margin: 100px auto 35px;
 	}
 	&__text {
 		margin: 15px auto;
-		width: 760px;
-		font-size: 30px;
+		width: 560px;
+		font-size: 20px;
 		font-weight: 300;
 		line-height: 1.6;
 	}
@@ -90,13 +89,13 @@ $contrast-color: #EECD31;
 		display: inline-block;
 		text-decoration: none;
 		padding: 12px 27px;
-		margin: 25px auto 85px;
+		margin: 25px auto 55px;
 	}
 }
 .slick-dots {
 	list-style-type: none;
 	padding: 0;
-	margin: 85px auto 0;
+	margin: 45px auto 0;
 	li {
 		display: inline-block;
 		& + li {
@@ -111,8 +110,8 @@ $contrast-color: #EECD31;
 	button {
 		display: inline-block;
 		border-radius: 50%;
-		width: 16px;
-		height: 16px;
+		width: 12px;
+		height: 12px;
 		border: none;
 		font-size: 0;
 		padding: 0;
